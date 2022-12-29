@@ -33,6 +33,11 @@ footer{
   	background-size: cover;
 }
 
+a{
+	text-decoration:none;
+	
+}
+
 /*
 Setting up styles on the top session navigation menu 
 */
@@ -89,7 +94,7 @@ Setting up styles on the main navigation menu
 
 .nav-bar{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
     height: 100px;
     background-color: #087992;
     align-items: center;
@@ -166,4 +171,54 @@ Setting up styles on Hero Banner
 	color: #0083ad;
 	height: 40px;
 	width: 120px
+}
+
+/*
+
+LOGIN STYLES
+
+*/
+
+.login-section{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	
+}
+
+.login-form{
+	width: 230px;
+	margin-top: 10%;
+	padding: 12%;
+	border: solid;
+	font-weight: bold;	
+	color: #087992;
+	line-height: 25px;
+	font-size: 1.2em;
+}
+
+
+.linkform{
+	display: flex;
+	justify-content: center;
+	margin-top:10%;
+	align-items: center;
+	color: #087992;
+}
+.login-form a{
+	
+	color: #087992;
+	font-size: 1.2em;
+}
+
+.btnForm{
+	margin-left: 5%;
+	background-color: #67bada;
+	color:white;
+	font-weight: bold;
+	border: none;
+	width: 40%;
+	height: 40px;
+	font-size: 1.0em;
+	
 }
