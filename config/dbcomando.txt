@@ -1,0 +1,1 @@
+CREATE table if not exists users(userid INT NOT NULL PRIMARY KEY, FirstName VARCHAR(15), LastName VARCHAR(15), email VARCHAR(50) NOT NULL , userpassword VARCHAR(50) NOT NULL , admin BOOLEAN DEFAULT false);
