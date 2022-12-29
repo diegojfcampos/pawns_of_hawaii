@@ -9,11 +9,7 @@ Setting up styles on the general elements
 body {
   font-family: sans-serif;
   font-size: 14px;  
-  position: relative;
-  
-  
- 
-    
+  position: relative;    
 }
 
 footer{
@@ -29,6 +25,12 @@ footer{
 	color: white;  	
   	position: static;
   	width: 100%;
+	margin-top:20px;
+	padding-top:3px;
+	background-image: url("../assets/img/background.png");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 
 /*
@@ -44,6 +46,10 @@ Setting up styles on the top session navigation menu
 	font-size: large;
 	padding-left: 2%;
 	padding-right: 2%;	
+	background-image: url("../assets/img/background.png");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 
 .nav-session a{
@@ -61,27 +67,20 @@ Setting up styles on the logo section
 	font-size: 3.5em;
 	padding-left: 50px;
 	color: #043C49;
-	font-family: Trattatello, fantasy;
+	font-family:  Sans-serif, Trattatell, fantasy;
 	font-style:italic;
-	
-	
 	
 }
 
 .logo-header{
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-around;	
+	flex-wrap: wrap;
 	border: solid;
 	border-color: #087992;
-	margin: 2px;
-	background-color: #B4D6DE;
-	
-	
+	margin: 2px;	
 }
-
-
-
 
 /*
 Setting up styles on the main navigation menu 
@@ -96,8 +95,8 @@ Setting up styles on the main navigation menu
     align-items: center;
 	font-size: large;
 	padding-left: 2%;
-	padding-right: 2%;		
-	     
+	padding-right: 2%;	
+		     
 }
 .nav-bar a{
 	text-decoration:none;
@@ -111,3 +110,60 @@ Setting up styles on the main navigation menu
     padding: 0;
 }
 
+/*
+Setting up styles on Hero Banner 
+*/
+
+.hero-banner {  
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-image: url("../assets/img/hero-img.jpg");
+   	height: 400px;
+   	width: 100%;  
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+	margin-top: 15px;	
+}
+
+.hero-content{
+	display:flex-column;
+	align-items: center;
+	justify-content: center;
+	width: 235px;
+	height: 60%;
+	border: solid;
+	border-color: white;
+	background: none;
+	margin-left: 5%;
+	
+		
+}
+
+.hero-content h1{
+	padding-left: 23%;
+	margin-bottom: 12%;
+	color:white;
+}
+
+.hero-content p{
+	margin-left: 8%;
+	margin-right: 5%;
+	font-size: 1.2rem;
+	color:#0083ad;
+	font-weight: bold;
+	
+}
+
+#btn-hero{
+	margin-left: 25%;
+	margin-top: 10%;
+	font-size: large;
+	background: white;
+	border: none;
+	color: #0083ad;
+	height: 40px;
+	width: 120px
+}
