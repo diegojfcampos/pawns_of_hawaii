@@ -9,7 +9,9 @@
         </div>
     </div>
 
-
+   <?php       echo '<pre>'; print_r($_POST); echo '</pre>';
+            echo var_dump($_POST);
+   ?>
 
 </main>
 <?php include("./includes/footer.php") ?>

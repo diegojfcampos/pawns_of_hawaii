@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
-$user = 'admin';
-$password = 'admin123';
+$user = 'root';
+$password = '';
 $dbname = 'pawns_of_hawaii';
 
 // Criar conexão

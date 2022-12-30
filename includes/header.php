@@ -34,10 +34,10 @@
 
     <section class="nav-bar">
       <a href="/pawns_of_hawaii/index.php">Home</a>
-      <a href="#">About us</a>
+      <a href="/pawns_of_hawaii/includes/forms.php">About us</a>
       <a href="#">Find a Pawn</a>
       <a href="#">Adopet</a>
-      <a href="#">Contact us</a>
+      <a href="/pawns_of_hawaii/views/contact.php">Contact us</a>
     </section>
 
   </header>
