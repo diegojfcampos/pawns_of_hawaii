@@ -18,7 +18,7 @@
             
             <div class="btnForm">
                 <input class="btnForm" type="reset" value="Reset">
-                <input class="btnForm" type="submit" value="Submit">
+                <input class="btnForm" type="submit" value="Send">
             </div>            
 
         </form>

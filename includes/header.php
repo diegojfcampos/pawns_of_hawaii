@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +9,14 @@
   <meta name="keywords" content="social project, pets, pawns, adoption">
   <meta name="description" content="Providing pets and families happier">
   <link rel="stylesheet" type="text/css" href="/pawns_of_hawaii/css/style.php">
+  <link rel="stylesheet" type="text/css" href="/opt/lampp/htdocs/pawns_of_hawaii/css/style.php">
   <script src="/pawns_of_hawaii/js/index.js" defer></script>
   <title>Pawns Hawaii</title>
 </head>
 
 <body>
   <header>
+  
 
     <section class="nav-session">
       <img src="/pawns_of_hawaii/assets/img/login-icon.png" alt="Sign-in icon" heigh="48" width="48">
@@ -31,13 +34,12 @@
       </div>
 
     </section>
-
+    
     <section class="nav-bar">
-      <a href="/pawns_of_hawaii/index.php">Home</a>
-      <a href="/pawns_of_hawaii/includes/forms.php">About us</a>
-      <a href="#">Find a Pawn</a>
-      <a href="#">Adopet</a>
-      <a href="/pawns_of_hawaii/views/contact.php">Contact us</a>
+      <?php 
+      error_reporting(E_ALL);
+      ini_set('display_errors', 1);
+      include("/opt/lampp/htdocs/pawns_of_hawaii/includes/navbar.php");?>
     </section>
-
+   
   </header>

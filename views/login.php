@@ -1,7 +1,7 @@
 <?php include("../includes/header.php") ?>
 <main>
     <section class="form-sections" id="login-form">
-        <form action="/pawns_of_hawaii/controller/register.php" method="post">        
+        <form action="/pawns_of_hawaii/controller/dologin.php" method="post">        
             
             <h1 class="formsTitle"> Login</h1>
 
@@ -16,7 +16,7 @@
             <div class="btnForm">
                 <input class="btnForm" type="reset" value="Reset">
                 <input class="btnForm" type="submit" value="Login">
-</div>         
+            </div>         
 
             <div class="linkform">
             <a class="link" href="signup.php">Sign-Up</a>

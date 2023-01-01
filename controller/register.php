@@ -19,37 +19,49 @@ var_dump($_POST);
         $email = trim($_POST['email']);
         $fname = trim($_POST['fname']);
         $lname = trim($_POST['lname']);
-        $passwordRegister = trim($_POST['passwordRegister']);
-        $passwordCheck = trim($_POST['passwordCheck']);
+
+        //Adding hash to encrypt passwords for best security practices.
+        $passwordRegister = md5(trim($_POST['passwordRegister']));
+        $passwordCheck = md5(trim($_POST['passwordCheck']));
 
 
-        //Verifying if user is alreayd registered
-        $query = "SELECT * FROM users where email=$email ";        
-        $queryResult = mysqli_query($conn, $query);        
+        //Verifying if user is alreayd registered in the DB
+        $queryIsRegistered = "SELECT * FROM users where email='$email'" ;        
+        $queryRegisterCheck = mysqli_query($conn, $queryIsRegistered);        
        
-        if (mysqli_num_rows($queryResult) > 0) {
+        if (mysqli_num_rows($queryRegisterCheck) > 0) {
            
             echo "User already registerd";        
 
-            /*Validating email format using filter => FILTER_VALIDATE_EMAIL)
-            also checking if email exists => !checkdnsrr(explode('@', $email)[1]*/
-        } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !checkdnsrr(explode('@', $email)[1], 'MX')) {
-            echo "Invalid email";
-            
-        } else if ($passwordRegister != $passwordCheck) {
-            echo "Passwords are diferents";
+        /*Validating email format using filter => FILTER_VALIDATE_EMAIL)
+        also checking if email's domain exists => !checkdnsrr(explode('@', $email)[1]
         
-        } else {
-            //Registering
+        I'm using or to allow test with no real e-mail
 
+        */
+        } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !checkdnsrr(explode('@', $email)[1], 'MX')) {
+            echo "Invalid email";
+        
+            //Verifying check password   
+        } else if ($passwordRegister != $passwordCheck) {
+            echo "Passwords are diferents";   
+             //Registering     
+        } else {       
             // SQL Query
-            $query = "INSERT INTO users (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', default)";
+            $queryInsertUser = "INSERT INTO users (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', default)";
 
             // Query Execution
-            if (mysqli_query($conn, $query)) {
+            if (mysqli_query($conn, $queryInsertUser)) {
                 echo "User inserted";
-                $_SESSION["email"] = $email;
-                header('Location: /pawns_of_hawaii/views/index_edit.php');
+                
+                //Creating Session
+                session_start();
+                $_SESSION['email'] = $email;
+                $_SESSION['privileges'] = "member";   
+                //header('Location: /pawns_of_hawaii/views/home.php');
+                header('Location: /pawns_of_hawaii/index.php');
+
+            //Throwing error           
             } else {
                 echo "Error to insert user " . mysqli_error($conn);
             }
