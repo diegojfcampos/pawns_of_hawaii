@@ -1,1 +1,11 @@
-CREATE table if not exists users(userid INT NOT NULL PRIMARY KEY, firstname VARCHAR(15), lastname VARCHAR(15), email VARCHAR(50) NOT NULL , userpassword VARCHAR(50) NOT NULL , admin BOOLEAN DEFAULT false);
+//Creating User Table
+CREATE table if not exists user(userid INT NOT NULL PRIMARY KEY  AUTO_INCREMENT, firstname VARCHAR(15), lastname VARCHAR(15), email VARCHAR(50) NOT NULL , userpassword VARCHAR(50) NOT NULL , admin BOOLEAN DEFAULT false);
+
+//Creating Testimonial Table
+CREATE table if not exists testimonial(messageid INT NOT NULL PRIMARY KEY  AUTO_INCREMENT, firstname VARCHAR(15) NOT NULL, lastname VARCHAR(15) NOT NULL, email VARCHAR(50) NOT NULL , testimonial MEDIUMTEXT CHARACTER SET utf8mb4, user_id INT NOT NULL, FOREIGN KEY (user_id) REFERENCES user(userid));
+
+//Creating contact Table
+CREATE table if not exists contact(testimonialid INT NOT NULL PRIMARY KEY  AUTO_INCREMENT, firstname VARCHAR(15) NOT NULL, lastname VARCHAR(15) NOT NULL, email VARCHAR(50) NOT NULL , textmessage LONGTEXT CHARACTER SET utf8mb4);
+
+//Creating pet Table
+CREATE table if not exists pet(petid INT NOT NULL PRIMARY KEY  AUTO_INCREMENT, code INT NOT NULL, name VARCHAR(15), age VARCHAR(15), breed VARCHAR(50) NOT NULL, city VARCHAR(30), description MEDIUMTEXT);

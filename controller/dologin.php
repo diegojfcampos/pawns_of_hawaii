@@ -4,6 +4,7 @@
 
     //Including DB Connection using require_once as better pratice.
     require_once('../config/dbconnect.php');
+    
 
     //Checking login requirement
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -14,7 +15,7 @@
         $password = md5(trim($_POST["password"]));
 
         //Query to check user
-        $queryCheckUser = "SELECT * FROM users where email='$email' and userpassword='$password'";
+        $queryCheckUser = "SELECT * FROM user where email='$email' and userpassword='$password'";
         $resultCheckUser = mysqli_query($conn, $queryCheckUser);
         //Checking if user in database
         if (mysqli_num_rows($resultCheckUser) == 1){
@@ -26,7 +27,11 @@
             $firstname = $user['firstname'];
             $lastname = $user['lastname'];
             $email = $user['email'];
-            $admin = $user['useradmin'];            
+            $admin = $user['useradmin'];    
+              
+            echo $user['useradmin'];
+            var_dump($admin);
+            
             
             //Starting Session                
             session_start();
@@ -39,9 +44,9 @@
             $_SESSION['admin'] = $user["useradmin"];
 
             //Redirecting user depending his admin privileges
-                if($user[$admin] == 1){
-                    $_SESSION['privileges'] = "admin";
-                    header('Location: /pawns_of_hawaii/index.php');
+            if($user["useradmin"] == '1'){
+                $_SESSION['privileges'] = "admin";
+                header('Location: /pawns_of_hawaii/index.php');
             }else{
                 $_SESSION['privileges'] = "member";
                 header('Location: /pawns_of_hawaii/index.php');

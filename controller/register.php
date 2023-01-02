@@ -4,6 +4,7 @@
 //Including DB Connection using require_once as better pratice.
 require_once('../config/dbconnect.php');
 
+
 //Debbuging - Verifying if the datas was sent corretly from the form
 echo '<pre>'; print_r($_POST); echo '</pre>';
 var_dump($_POST);
@@ -24,11 +25,19 @@ var_dump($_POST);
         $passwordRegister = md5(trim($_POST['passwordRegister']));
         $passwordCheck = md5(trim($_POST['passwordCheck']));
 
+        //Checking privileges
+        if($_POST['privileges'] == "admin"){
+            $admin = 1;
+            $privileges = "admin";
+        }else{
+            $admin = 0;
+            $privileges = "member";
+        };
 
         //Verifying if user is alreayd registered in the DB
-        $queryIsRegistered = "SELECT * FROM users where email='$email'" ;        
+        $queryIsRegistered = "SELECT * FROM user where email='$email'" ;        
         $queryRegisterCheck = mysqli_query($conn, $queryIsRegistered);        
-       
+        var_dump($_POST);
         if (mysqli_num_rows($queryRegisterCheck) > 0) {
            
             echo "User already registerd";        
@@ -48,8 +57,8 @@ var_dump($_POST);
              //Registering     
         } else {       
             // SQL Query
-            $queryInsertUser = "INSERT INTO users (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', default)";
-
+            $queryInsertUser = "INSERT INTO user (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', $admin)";
+           
             // Query Execution
             if (mysqli_query($conn, $queryInsertUser)) {
                 echo "User inserted";
@@ -57,7 +66,8 @@ var_dump($_POST);
                 //Creating Session
                 session_start();
                 $_SESSION['email'] = $email;
-                $_SESSION['privileges'] = "member";   
+                $_SESSION['privileges'] = $privileges;   
+                
                 //header('Location: /pawns_of_hawaii/views/home.php');
                 header('Location: /pawns_of_hawaii/index.php');
 

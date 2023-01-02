@@ -43,9 +43,3 @@ echo '</a>';
 
 
 ?>
-
-<a href="/pawns_of_hawaii/index.php">Home</a>
-<a href="/pawns_of_hawaii/includes/forms.php">About us</a>
-<a href="#">Find a Pawn</a>
-<a href="#">Adopet</a>
-<a href="/pawns_of_hawaii/views/contact.php">Contact us</a>
