@@ -210,11 +210,12 @@ Setting up styles on the logo section
 */
 
 #titlePrahse {
-  font-size: 3.5em;
-  padding-left: 50px;
+  font-size: 4em;
+  padding-left: 30px;
   color: #043c49;
   font-family: Sans-serif, Trattatell, fantasy;
   font-style: italic;
+  margin-bottom: 15px;
 }
 
 .logo-header {
@@ -222,7 +223,6 @@ Setting up styles on the logo section
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-
   margin: 2px;
 }
 
@@ -717,6 +717,11 @@ adopt-box {
   }
   .nav-session {
     font-size: 1.4em;
+  }
+
+  #titlePrahse {
+    
+    margin-left: 45px;
   }
 
 
