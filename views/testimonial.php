@@ -1,8 +1,7 @@
 <?php include("../includes/header.php"); ?>
 <main>
 
-    <?php
-   
+    <?php      
     include("../controller/testimonial_management.php");
     ?>
 

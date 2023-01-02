@@ -10,6 +10,38 @@ try{
     //If from findapawn.php
     switch ($_SERVER['PHP_SELF']) {
         case '/pawns_of_hawaii/views/findapawn.php':
+
+            /* Creating dynamically the header of the table*/
+            $menu_items = array(
+                array(
+                  'label' => 'Code',
+                ),
+                array(
+                  'label' => 'Name',
+                ),
+                array(
+                  'label' => 'Age',
+                ),
+                array(
+                  'label' => 'Breed',
+                ),
+                array(
+                  'label' => 'City',
+                ),
+                array(
+                  'label' => 'About',
+                ),          
+              );          
+              foreach ($menu_items as $item) {          
+                echo "<th href=>" . $item['label'] . "</th>";          
+            };
+
+            /*
+            
+            Creating Table dynamacally
+            
+            */
+
             //Creating Query
             $queryGetPet = "SELECT * from pet";
             $getPetResult = mysqli_query($conn, $queryGetPet);
@@ -19,7 +51,12 @@ try{
             } else {
                 while ($user_data = mysqli_fetch_array($getPetResult)) {
                     echo "<tr>";
-                    echo "<td><a href='../views/pet_details.php'>" . $user_data['code'] . "</a></td>";
+                    echo "<td>";
+                    echo "<form action='../controller/create_details_page.php' method='post'>";
+                    echo "<input type='hidden' name='code' value='" . $user_data['code'] . "'>";
+                    echo "<input type='submit' value='" . $user_data['code'] . "'>";
+                    echo "</form>";
+                    echo "</td>";
                     echo "<td>" . $user_data['name'] . "</td>";
                     echo "<td>" . $user_data['age'] . "</td>";
                     echo "<td>" . $user_data['breed'] . "</td>";
@@ -31,6 +68,28 @@ try{
             break;
         //If from testimonial.php
         case '/pawns_of_hawaii/views/testimonial.php':
+            /* Creating dynamically the header of the table*/
+            $menu_items = array(
+                array(
+                  'label' => 'ID',
+                ),
+                array(
+                  'label' => 'First Name',
+                ),
+                array(
+                  'label' => 'Last Name',
+                ),
+                array(
+                  'label' => 'Email',
+                ),
+                array(
+                  'label' => 'Message',
+                ),          
+              );          
+              foreach ($menu_items as $item) {          
+                echo "<th href=>" . $item['label'] . "</th>";          
+              };
+
             //Creating Query
             $queryGetTestimonial = "SELECT * from testimonial";
             $getTestimonialResult = mysqli_query($conn, $queryGetTestimonial);
@@ -52,6 +111,28 @@ try{
 
         //If from contact.php
         case '/pawns_of_hawaii/views/contact.php':
+            /* Creating dynamically the header of the table*/
+            $menu_items = array(
+                array(
+                  'label' => 'ID',
+                ),
+                array(
+                  'label' => 'First Name',
+                ),
+                array(
+                  'label' => 'Last Name',
+                ),
+                array(
+                  'label' => 'Email',
+                ),
+                array(
+                  'label' => 'Message',
+                ),          
+              );          
+              foreach ($menu_items as $item) {          
+                echo "<th href=>" . $item['label'] . "</th>";          
+              };
+
             //Creating Query
                 $queryGetContact = "SELECT * from contact";
                 $getContactResult = mysqli_query($conn, $queryGetContact);

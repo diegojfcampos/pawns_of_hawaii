@@ -1,6 +1,6 @@
-/*<?php
+/*?php
 header('Content-type: text/css; charset:UFT-8')
-  ?>
+?>
 */
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -655,6 +655,51 @@ adopt-box {
   font-size: 1.4em;
   padding-top: 20px;
 }
+
+/*
+Setting Styles on Detail Page
+*/
+
+.detail-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  flex-wrap: wrap;
+  margin: 2%;  
+  border: solid;
+  
+}
+
+.detail-info{  
+  display: flex;  
+  flex-direction: column;
+  font-size: 1.8em;
+  padding: 25px; 
+}
+.details{  
+  display: flex;
+  padding-bottom: 25px;    
+}
+
+.details h1{
+  padding-right: 10px;
+  font-weight: bold;
+  color: #043c49;
+}
+.details-about{
+  
+  width: 850px;
+}
+.details-about h1{
+  padding-right: 10px;
+  font-weight: bold;
+  color: #043c49;
+  
+}
+
+
+
 
 /*
 /* Style The Dropdown Button 
