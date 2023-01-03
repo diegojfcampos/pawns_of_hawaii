@@ -20,7 +20,6 @@ var_dump($_POST);
         $fname = trim($_POST['firstname']);
         $lname = trim($_POST['lastname']);        
         $textmessage = $_POST['subject'];
-
        
         //Creating Query
         $queryInsertUser = "INSERT INTO contact (firstname, lastname, email, textmessage) VALUES ('$fname', '$lname', '$email', '$textmessage')";

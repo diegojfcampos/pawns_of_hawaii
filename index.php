@@ -14,22 +14,30 @@
         <div class="pet-cards">
             <div class="pet-adoption">
                 <div class="pet-name"> Jordan (0085)</div>
+                <a href="/pawns_of_hawaii/views/findapawn.php">
                 <img src="/pawns_of_hawaii/assets/img/dog1-jordan.jpg" alt="Imagem dog to Adoption" height="250px" width="350px">
+                </a>
             </div>
 
             <div class="pet-adoption">
                 <div class="pet-name"> Patty (0102)</div>
+                <a href="/pawns_of_hawaii/views/findapawn.php">
                 <img src="/pawns_of_hawaii/assets/img/cat1-patty.jpg" alt="Imagem cat to Adoption" height="250px" width="350px">
+                </a>
             </div>
 
             <div class="pet-adoption">
                 <div class="pet-name"> Max (0110)</div>
+                <a href="/pawns_of_hawaii/views/findapawn.php">
                 <img src="/pawns_of_hawaii/assets/img/dog1-max.jpg" alt="Imagem dog to Adoption" height="250px" width="350px">
+                </a>
             </div>
 
             <div class="pet-adoption">
                 <div class="pet-name"> Sasha (0070)</div>
+                <a href="/pawns_of_hawaii/views/findapawn.php">
                 <img src="/pawns_of_hawaii/assets/img/cat2-bella.jpeg" alt="Imagem cat to Adoption" height="250px" width="350px">
+                </a>
             </div>
         </div>
 

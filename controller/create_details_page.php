@@ -4,7 +4,7 @@
     require_once('../config/dbconnect.php');
 
     //Starting validations
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET') {
 
         /*I don't need verify datas ex: if(!empty($email) $$ !empty($password)) because the
         essentials to the database  and  to execute this system are required on the form 
