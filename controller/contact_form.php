@@ -1,6 +1,6 @@
 <main>    
     <section class="form-sections">
-        <form action="/pawns_of_hawaii/controller/post_contact.php"  method="post">
+        <form action="/pawns_of_hawaii/controller/contact_post.php"  method="post">
 
             <label for="firstname">First Name *</label>
             <input type="text" id="fnameContact" name="firstname" placeholder="Your name.." required>

@@ -1,7 +1,7 @@
 <?php include("../includes/header.php") ?>
 <main>
     <section class="form-sections" id="reg-form">
-        <form action="/pawns_of_hawaii/controller/register.php" method="post">
+        <form action="/pawns_of_hawaii/controller/dosignup.php" method="post">
 
             <h1 class="formsTitle"> Registration</h1>
 

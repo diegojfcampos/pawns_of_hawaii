@@ -4,5 +4,6 @@
             <tr>
                 <?php include("create_table.php")?>
             </tr>
+
         </table>
-    </section>
+</section>

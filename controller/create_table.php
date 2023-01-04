@@ -1,5 +1,3 @@
-
-
 <?php
 /*Creating dynamic tables where depending of the origin of the call
  will create a table with datas from the specifc database*/
@@ -52,7 +50,7 @@ try{
                 while ($user_data = mysqli_fetch_array($getPetResult)) {
                     echo "<tr>";
                     echo "<td>";
-                    echo "<form action='../controller/create_details_page.php' method='post'>";
+                    echo "<form action='../controller/findapawn_details_page.php' method='post'>";
                     echo "<input type='hidden' name='code' value='" . $user_data['code'] . "'>";
                     echo "<input type='submit' value='" . $user_data['code'] . "'>";
                     echo "</form>";
@@ -69,6 +67,7 @@ try{
         //If from testimonial.php
         case '/pawns_of_hawaii/views/testimonial.php':
             /* Creating dynamically the header of the table*/
+            
             $menu_items = array(
                 array(
                   'label' => 'ID',
@@ -91,7 +90,7 @@ try{
               };
 
             //Creating Query
-            $queryGetTestimonial = "SELECT * from testimonial";
+            $queryGetTestimonial = "SELECT * from testimonial WHERE visible = 1";
             $getTestimonialResult = mysqli_query($conn, $queryGetTestimonial);
 
             if (!$getTestimonialResult) {

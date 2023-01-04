@@ -4,9 +4,10 @@
     if(isset($_SESSION['privileges'])){        
         //Manneging content by user privileges
         switch ($_SESSION['privileges']) {
-            
-            case 'admin':
-                include("testimonial_list.php");
+
+        case 'admin':
+                include("testimonial_list_edit.php");
+                include("testimonial_list.php");                
                 include("testimonial_form.php");
                 break;
 

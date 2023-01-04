@@ -27,7 +27,7 @@ var_dump($_POST);
 
        
         //Creating Query
-        $queryInsertUser = "INSERT INTO testimonial (firstname, lastname, email, testimonial, user_id) VALUES ('$fname', '$lname', '$email', '$textmessage', '$user')";
+        $queryInsertUser = "INSERT INTO testimonial (firstname, lastname, email, testimonial, visible, user_id) VALUES ('$fname', '$lname', '$email', '$textmessage', default, '$user')";
         
         // Query Execution
     if (mysqli_query($conn, $queryInsertUser)) {

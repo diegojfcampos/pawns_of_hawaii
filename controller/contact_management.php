@@ -10,8 +10,7 @@
                 include("contact_form.php");
                 break;
 
-            case 'member':
-                include("contact_list.php");
+            case 'member':                
                 include("contact_form.php");
                 break;
 

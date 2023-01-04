@@ -138,6 +138,11 @@ table {
 Setting up styles on the general elements
 */
 
+/*Setting up the zoom and scale 80% to keep  page display*/
+html{
+  zoom: 80%;  
+}
+
 body {
   font-family: sans-serif;
   font-size: 14px;
@@ -713,6 +718,43 @@ Setting Styles on Detail Page
   border: none;
   cursor: pointer;
   width: 160px;
+}
+
+/*
+Setting Styles on botao btnSetVisible localzied on Testimonial previlegies Admin
+*/
+
+.btnSetVisible-section{
+  display: flex;  
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+
+}
+#btnSetVisible-div{
+  display: flex;  
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+}
+
+#btnSetVisible{  
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+ 
+  height: 80px;
+  width: 180px;
+  font-size: 2em;
+  margin-right: 50px;
+  
+}
+
+.checkbox-visible{
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  display: block;
 }
 
 /* The container <div> - needed to position the dropdown content */
