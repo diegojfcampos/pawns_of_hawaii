@@ -6,11 +6,14 @@
         switch ($_SESSION['privileges']) {
             
             case 'admin':
+                echo '<h1 class="edit-titles"> Contact List</h1/>';
                 include("contact_list.php");
+                echo '<h1 class="edit-titles"> Contact Us</h1/>';
                 include("contact_form.php");
                 break;
 
-            case 'member':                
+            case 'member':   
+                echo '<h1 class="edit-titles"> Contact Us</h1/>';             
                 include("contact_form.php");
                 break;
 
@@ -18,6 +21,7 @@
                 break;
         }
     }else{
+        echo '<h1 class="edit-titles"> Contact Us</h1/>';
         include("contact_form.php");
         
     }

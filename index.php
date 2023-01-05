@@ -47,12 +47,14 @@
            
         <div id="text-whyadopt">
             <h1 id="title-whyadopt">Why adopt a Cat?</h1>
-            <p>Adopting a pet is a wonderful way to bring joy and companionship into your life. It's also an act of kindness that helps to save a life and make a positive impact on the community.</p><br>
-            <p>When you adopt a pet, you are giving a second chance to an animal that may have been abandoned, neglected, or surrendered by their previous owner. By providing a loving home and the necessary care, you are giving them the opportunity to live a happy and fulfilling life.</p><br>
-            <p>In addition to the personal rewards of adopting a pet, there are also several social and environmental benefits. Adopting a pet can help to reduce the number of animals that end up in shelters and prevent overpopulation. It can also help to reduce the number of stray animals on the streets, which can have a positive impact on the community.</p><br>
-        </div>
+            <p id="content">Adopting a pet is a wonderful way to bring joy and companionship into your life. It's also an act of kindness that helps to save a life and make a positive impact on the community.<br>
+            When you adopt a pet, you are giving a second chance to an animal that may have been abandoned, neglected, or surrendered by their previous owner. By providing a loving home and the necessary care, you are giving them the opportunity to live a happy and fulfilling life.<br>
+            In addition to the personal rewards of adopting a pet, there are also several social and environmental benefits. Adopting a pet can help to reduce the number of animals that end up in shelters and prevent overpopulation. It can also help to reduce the number of stray animals on the streets, which can have a positive impact on the community.</p><br>
+        </div>        
 
     </section>
+
+    <?php include("./controller/index_manegament.php");?>
 
     <section class="testimonial-section">
         <h1 id="testimonial-title"> What People Say</h1>

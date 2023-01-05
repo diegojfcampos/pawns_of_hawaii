@@ -4,10 +4,6 @@
 //Including DB Connection using require_once as better pratice.
 require_once('../config/dbconnect.php');
 
-//Debbuging - Verifying if the datas was sent corretly from the form
-echo '<pre>'; print_r($_POST); echo '</pre>';
-var_dump($_POST);
-
     //Starting validations
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -16,10 +12,10 @@ var_dump($_POST);
         so will never be empty before posted*/
 
         //Instancing variables
-        $email = trim($_POST['email']);
-        $fname = trim($_POST['firstname']);
-        $lname = trim($_POST['lastname']);        
-        $textmessage = $_POST['subject'];
+        $email =  htmlspecialchars(trim($_POST['email']));
+        $fname =  htmlspecialchars(trim($_POST['firstname']));
+        $lname =  htmlspecialchars(trim($_POST['lastname']));        
+        $textmessage =  htmlspecialchars($_POST['subject']);
        
         //Creating Query
         $queryInsertUser = "INSERT INTO contact (firstname, lastname, email, textmessage) VALUES ('$fname', '$lname', '$email', '$textmessage')";

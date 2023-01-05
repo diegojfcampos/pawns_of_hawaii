@@ -139,8 +139,8 @@ Setting up styles on the general elements
 */
 
 /*Setting up the zoom and scale 80% to keep  page display*/
-html{
-  zoom: 80%;  
+html {
+  zoom: 80%;
 }
 
 body {
@@ -206,7 +206,6 @@ Setting up styles on the top session navigation menu
 }
 
 .nav-session a:hover {
-  
   color: white;
   background-color: #043c49;
 }
@@ -228,7 +227,6 @@ Setting up styles on the logo section
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  
 }
 
 /*
@@ -427,7 +425,7 @@ Setting Styles on Testimonials
   border: solid;
   border-color: #0083ad;
   height: 300px;
-  width: 365px;
+  width: 380px;
   padding: 5px;
   margin: 4%;
   margin-top: 5%;
@@ -451,8 +449,13 @@ Setting Styles on Testimonials
   font-size: 2em;
   align-items: center;
   background-color: #68bbd9;
+  padding-left: 5px;
   width: 100%;
   height: 35%;
+}
+#testimonial1, #testimonial2, #testimonial3 {
+  padding-left: 5px;
+  margin-left: 5px;
 }
 
 #send-testimonial {
@@ -471,6 +474,14 @@ Setting Styles on Testimonials
   font-weight: bold;
   border: solid;
   color: white;
+}
+
+.edit-titles{
+  font-size: 3rem;
+  color: #087992;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-weight: bold;
 }
 
 /*
@@ -665,46 +676,40 @@ adopt-box {
 Setting Styles on Detail Page
 */
 
-.detail-container{
+.detail-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  
+
   flex-wrap: wrap;
-  margin: 2%;  
+  margin: 2%;
   border: solid;
-  
 }
 
-.detail-info{  
-  display: flex;  
+.detail-info {
+  display: flex;
   flex-direction: column;
   font-size: 1.8em;
-  padding: 25px; 
+  padding: 25px;
 }
-.details{  
+.details {
   display: flex;
-  padding-bottom: 25px;    
+  padding-bottom: 25px;
 }
 
-.details h1{
+.details h1 {
   padding-right: 10px;
   font-weight: bold;
   color: #043c49;
 }
-.details-about{
-  
+.details-about {
   width: 850px;
 }
-.details-about h1{
+.details-about h1 {
   padding-right: 10px;
   font-weight: bold;
   color: #043c49;
-  
 }
-
-
-
 
 /*
 /* Style The Dropdown Button 
@@ -724,33 +729,31 @@ Setting Styles on Detail Page
 Setting Styles on botao btnSetVisible localzied on Testimonial previlegies Admin
 */
 
-.btnSetVisible-section{
-  display: flex;  
-  justify-content: flex-end;
-  align-items: center;
-  align-content: flex-end;
-
-}
-#btnSetVisible-div{
-  display: flex;  
+.btnSetVisible-section {
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   align-content: flex-end;
 }
+#btnSetVisible-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+}
 
-#btnSetVisible{  
-  display: flex;  
+#btnSetVisible {
+  display: flex;
   justify-content: center;
   align-items: center;
- 
+
   height: 80px;
   width: 180px;
   font-size: 2em;
   margin-right: 50px;
-  
 }
 
-.checkbox-visible{
+.checkbox-visible {
   height: 30px;
   width: 30px;
   margin: 0 auto;
@@ -798,8 +801,7 @@ Setting Styles on botao btnSetVisible localzied on Testimonial previlegies Admin
 
 /*Responsivity adjusts*/
 @media only screen and (max-width: 800px) {
-
-  #nav-bar { 
+  #nav-bar {
     font-size: 1.2em;
   }
   .nav-session {
@@ -807,9 +809,6 @@ Setting Styles on botao btnSetVisible localzied on Testimonial previlegies Admin
   }
 
   #titlePrahse {
-    
     margin-left: 45px;
   }
-
-
 }

@@ -6,10 +6,10 @@
             <h1 class="formsTitle"> Login</h1>
 
             <label for="email">E-mail:</label>
-            <input type="text" id="registerEmail" name="email" placeholder="Your email." required>
+            <input type="text" id="registerEmail" name="email" placeholder="Your email." >
 
             <label for="passwordRegister">Password:</label>
-            <input type="password" id="registerPassword" name="password" placeholder="Your password.." required>
+            <input type="password" id="registerPassword" name="password" placeholder="Your password..">
 
             <label for="registerStatus"></label>
 

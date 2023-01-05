@@ -17,11 +17,7 @@ if (isset($_SESSION['privileges'])) {
 
         case 'admin':
             echo <<<EOT
-
-            <a href="/pawns_of_hawaii/controller/dologout.php">Index</a>
-            <a href="/pawns_of_hawaii/controller/dologout.php">Register</a>
-            <a href="/pawns_of_hawaii/controller/dologout.php">Testimonial</a>
-            <a href="/pawns_of_hawaii/controller/dologout.php">Pet</a>
+         
             <a href="/pawns_of_hawaii/controller/dologout.php">Logout</a>
             
             EOT;

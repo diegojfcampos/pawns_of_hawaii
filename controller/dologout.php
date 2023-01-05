@@ -1,6 +1,6 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
+session_start(); //Starting to aloow procediments
+session_unset(); //Unseting current values to avoid crash
+session_destroy(); //Destroying current files
 header('Location: /pawns_of_hawaii/index.php');
 ?>
