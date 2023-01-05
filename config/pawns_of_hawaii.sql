@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 02, 2023 at 10:03 PM
+-- Generation Time: Jan 05, 2023 at 09:23 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -46,7 +46,23 @@ INSERT INTO `contact` (`messageid`, `firstname`, `lastname`, `email`, `textmessa
 (9, 'Alice', 'Williams', 'alice.williams@example.com', 'Hello, this is a message from Alice Williams.'),
 (10, 'Mike', 'Brown', 'mike.brown@example.com', 'Hello, this is a message from Mike Brown.'),
 (11, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Test'),
-(12, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Testing');
+(12, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Testing'),
+(13, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Test'),
+(14, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donate`
+--
+
+CREATE TABLE `donate` (
+  `firstName` varchar(50) DEFAULT NULL,
+  `lastName` varchar(50) DEFAULT NULL,
+  `email` varchar(50) NOT NULL,
+  `donationAmount` varchar(50) NOT NULL,
+  `address` varchar(50) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -70,7 +86,7 @@ CREATE TABLE `pet` (
 
 INSERT INTO `pet` (`petid`, `code`, `name`, `age`, `breed`, `city`, `description`) VALUES
 (1, '85', 'Jordan', '2', 'Border Collie', 'Dublin', 'Jordan is a 2-year-old Border Collie. He is very smart and lovely.'),
-(2, '102', 'Patty', '6', 'Polydactyl', 'Cork', 'Patty  is a 6-year-old domestic shorthair. She is very friendly and loves cuddling up with his humans on the couch.\"'),
+(2, '102', 'Patty', '5', 'Polydactyl', 'Cork', 'Patty  is a 6-year-old domestic shorthair. She is very friendly and loves cuddling up with his humans on the couch.&quot;'),
 (3, '110', 'Max', '1', 'Rat Terrier', 'Cork', 'Max is very energetic and loves going on long runs and hikes.'),
 (4, '70', 'Sasha', '3', 'Polydactyl', 'Galway', 'Sasha is a friendly and affectionate 3-year-old domestic. She enjoys cuddling and playing with her humans.'),
 (5, '1234', 'Fluffy', '5', 'Siamese', 'Galway', 'Fluffy is a 5-year-old Siamese cat.'),
@@ -92,20 +108,21 @@ CREATE TABLE `testimonial` (
   `lastname` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
   `testimonial` mediumtext DEFAULT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `visible` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `testimonial`
 --
 
-INSERT INTO `testimonial` (`testimonialid`, `firstname`, `lastname`, `email`, `testimonial`, `user_id`) VALUES
-(1, 'John', 'Smith', 'john@example.com', 'I adopted my furry best friend from this shelter and I could not be happier. The staff was so helpful and caring, and they really made the process smooth and enjoyable. I highly recommend adopting from this shelter!', 1),
-(2, 'Jane', 'Doe', 'jane@example.com', 'I was so nervous about adopting a pet, but the staff at this shelter put me at ease and helped me find the perfect match for my family. We have had our new furry family member for a month now and we are all in love! Thank you for everything.', 1),
-(3, 'Jack', 'Brown', 'jack@example.com', 'We adopted our two furry children from this shelter and we could not be happier. They have brought so much joy to our lives and we are so grateful to the staff for all their help and support. If you are thinking about adopting, this is the place to go!', 1),
-(4, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Testing...', 1),
-(5, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Testing 123', 1),
-(6, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'testing', 1);
+INSERT INTO `testimonial` (`testimonialid`, `firstname`, `lastname`, `email`, `testimonial`, `user_id`, `visible`) VALUES
+(1, 'John', 'Smith', 'john@example.com', 'I adopted my furry best friend from this shelter and I could not be happier. The staff was so helpful and caring, and they really made the process smooth and enjoyable. I highly recommend adopting from this shelter!', 1, 1),
+(2, 'Jane', 'Doe', 'jane@example.com', 'I was so nervous about adopting a pet, but the staff at this shelter put me at ease and helped me find the perfect match for my family. We have had our new furry family member for a month now and we are all in love! Thank you for everything.', 1, 1),
+(3, 'Jack', 'Brown', 'jack@example.com', 'We adopted our two furry children from this shelter and we could not be happier. They have brought so much joy to our lives and we are so grateful to the staff for all their help and support. If you are thinking about adopting, this is the place to go!', 1, 1),
+(4, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Testing...', 1, 0),
+(5, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'Testing 123', 1, 0),
+(6, 'Diego', 'Campos', 'diegojfcampos@gmail.com', 'testing', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -168,7 +185,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `messageid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `messageid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pet`
