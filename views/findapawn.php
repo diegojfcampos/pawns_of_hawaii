@@ -13,7 +13,12 @@
         </table>
 
     </section>
-    <h1 class="edit-titles"> Pet List Edit</h1>
+    <?php switch ($_SESSION['privileges']) {        
+        case 'admin':
+            echo '<h1 class="edit-titles"> Pet List Edit</h1>';
+        }
+    ?>
+    
     <section class="table-section">
         
         <table class="tables">

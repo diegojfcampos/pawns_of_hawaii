@@ -11,7 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="social project, pets, pawns, adoption">
   <meta name="description" content="Providing pets and families happier">
-  <link rel="stylesheet" type="text/css" href="/pawns_of_hawaii/css/style.css">  
+  <link rel="stylesheet" type="text/css" href="/pawns_of_hawaii/css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="/opt/lampp/htdocs/pawns_of_hawaii/css/style.css">    
   <script src="/pawns_of_hawaii/js/index.js" defer></script>
   <title>Pawns Hawaii</title>
 </head>
@@ -19,8 +23,18 @@
 <body>
   <header>  
 
-    <section class="nav-session">
-      <?php include("/opt/lampp/htdocs/pawns_of_hawaii/controller/navpanel.php");?>
+    <section class="nav-session">      
+   
+    <?php 
+        switch ($_SERVER['PHP_SELF']) {
+            case '/pawns_of_hawaii/index.php':                  
+                include("controller/navpanel.php");
+                break;            
+            default:
+            include("../controller/navpanel.php");
+                break;
+        } 
+    ?> 
     </section>
 
     <section class="logo-header">
@@ -34,10 +48,17 @@
     </section>
     
     <section class="nav-bar" id="nav-bar">
-      <?php 
-      error_reporting(E_ALL);
-      ini_set('display_errors', 1);
-      include("/opt/lampp/htdocs/pawns_of_hawaii/controller/navbar.php");?>
+
+    <?php 
+        switch ($_SERVER['PHP_SELF']) {
+            case '/pawns_of_hawaii/index.php':                  
+                include("controller/navbar.php");
+                break;            
+            default:
+            include("../controller/navbar.php");
+                break;
+        } 
+    ?>
     </section>
 
   </header>
