@@ -605,6 +605,7 @@ Setting up table style
 
 .tables {
   width: 100%;
+  display: flex;
   border-collapse: collapse;
 }
 
