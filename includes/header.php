@@ -30,7 +30,7 @@
                 include("controller/navpanel.php");
                 break;            
             default:
-            include("/workspace/paws_of_hawaii/controller/navpanel.php");
+            include("../controller/navpanel.php");
                 break;
         } 
     ?> 
@@ -66,7 +66,7 @@
                 include("controller/navbar.php");
                 break;            
             default:
-            include("/workspace/paws_of_hawaii/controller/navbar.php");
+            include("../controller/navbar.php");
                 break;
         } 
     ?>
