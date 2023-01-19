@@ -2,7 +2,7 @@
         <table class="tables">
             
             <tr>
-                <?php include("create_table.php")?>
+                <?php include("../create_table.php")?>
             </tr>
 
         </table>

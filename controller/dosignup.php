@@ -17,9 +17,9 @@ var_dump($_POST);
         so will never be empty before posted*/
 
         //Instancing variables
-        $email = htmlspecialchars(trim($_POST['email']));
-        $fname = htmlspecialchars(trim($_POST['fname']));
-        $lname = htmlspecialchars(trim($_POST['lname']));
+        $email = trim($_POST['email']);
+        $fname = trim($_POST['fname']);
+        $lname = trim($_POST['lname']);
 
         //Adding hash to encrypt passwords for best security practices.
         $passwordRegister = md5(trim($_POST['passwordRegister']));

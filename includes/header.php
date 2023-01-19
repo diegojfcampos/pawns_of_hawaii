@@ -13,9 +13,8 @@
   <meta name="description" content="Providing pets and families happier">
   <link rel="stylesheet" type="text/css" href="/pawns_of_hawaii/css/style.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <link rel="stylesheet" type="text/css" href="/opt/lampp/htdocs/pawns_of_hawaii/css/style.css">    
+  
   <script src="/pawns_of_hawaii/js/index.js" defer></script>
   <title>Pawns Hawaii</title>
 </head>
@@ -31,7 +30,7 @@
                 include("controller/navpanel.php");
                 break;            
             default:
-            include("../controller/navpanel.php");
+            include("/workspace/paws_of_hawaii/controller/navpanel.php");
                 break;
         } 
     ?> 
@@ -39,7 +38,19 @@
 
     <section class="logo-header">
       <div>
-        <img src="/pawns_of_hawaii/assets/img/logo.png" height="300px" width="350px">
+		  
+	  <?php 
+		 
+        switch ($_SERVER['PHP_SELF']) {
+            case '/paws_of_hawaii/index.php':                  
+               echo'<img src="assets/img/logo.png" height="300px" width="350px">';
+                break;            
+            default:
+				echo '<img src="../assets/img/logo.png" height="300px" width="350px">';
+				break;
+        } 
+      ?> 
+        
       </div>
       <div>
         <p id="titlePrahse">Providing pets and families happier!</p>
@@ -55,7 +66,7 @@
                 include("controller/navbar.php");
                 break;            
             default:
-            include("../controller/navbar.php");
+            include("/workspace/paws_of_hawaii/controller/navbar.php");
                 break;
         } 
     ?>

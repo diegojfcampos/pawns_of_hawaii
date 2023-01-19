@@ -36,11 +36,21 @@ if (isset($_SESSION['privileges'])) {
             break;
     }
 } else {
-    echo <<<EOT
+   
+	 switch ($_SERVER['PHP_SELF']) {
+			 
+           case '/paws_of_hawaii/index.php':                  
+                echo '<a href="./views/login.php">Login</a>';        
+        		echo '<a href="./views/signup.php">Sign-up</a>';
+                break;            
+            default:
+                echo '<a href="../views/login.php">Login</a>';        
+        		echo '<a href="../views/signup.php">Sign-up</a>';
+                break;
+        } 
         
-        <a href="/pawns_of_hawaii/views/login.php">Login</a>        
-        <a href="/pawns_of_hawaii/views/signup.php">Sign-up</a>
-    EOT;
+
+    	
 
 }
 ?>
