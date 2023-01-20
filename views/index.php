@@ -1,5 +1,5 @@
 <main>
-    <?php include("./includes/header.php") ?>
+    <?php include("../includes/header.php") ?>
 
     <section class="hero-banner">
         <div class="hero-content">
@@ -54,7 +54,7 @@
 
     </section>
 
-    <?php include("./controller/index_manegament.php");?>
+    <?php include("../controller/index_manegament.php");?>
 
     <section class="testimonial-section">
         <h1 id="testimonial-title"> What People Say</h1>
@@ -80,4 +80,4 @@
 
 
 </main>
-<?php include("./includes/footer.php") ?>
+<?php include("../includes/footer.php") ?>
