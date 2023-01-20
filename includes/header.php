@@ -13,6 +13,7 @@ session_start();
   <meta name="keywords" content="social project, pets, pawns, adoption">
   <meta name="description" content="Providing pets and families happier">  
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 
   <script src="/pawns_of_hawaii/js/index.js" defer></script>
   <title>Pawns Hawaii</title>
