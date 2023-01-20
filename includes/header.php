@@ -1,6 +1,6 @@
 <?php
     session_start();
-    define('PROJECT_ROOT', dirname(__FILE__));
+    
   ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
     <?php 
         switch ($_SERVER['PHP_SELF']) {
             case '/pawns_of_hawaii/index.php':                  
-                require PROJECT_ROOT . '/controller/navpanel.php';
+                include("controller/navpanel.php");
                 break;            
             default:
             include("../controller/navpanel.php");

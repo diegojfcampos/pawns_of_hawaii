@@ -1,5 +1,5 @@
 <?php
-
+    echo 'ESTA FUNCIONANDO';
     // Including DB Connection 
 
     //Including DB Connection using require_once as better pratice.
