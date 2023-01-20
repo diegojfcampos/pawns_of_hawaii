@@ -12,9 +12,8 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="social project, pets, pawns, adoption">
   <meta name="description" content="Providing pets and families happier">
-  <link rel="stylesheet" type="text/css" href="/pawns_of_hawaii/css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="/pawns_of_hawaii/css/style.css"> 
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 
   <script src="/pawns_of_hawaii/js/index.js" defer></script>
   <title>Pawns Hawaii</title>
@@ -25,10 +24,8 @@ session_start();
 
     <section class="nav-session">
 
-      <?php
-
-      include("controller/navpanel.php");
-      include("../controller/navpanel.php");
+      <?php      
+      include("./controller/navpanel.php");
       ?>
     </section>
 
@@ -56,12 +53,9 @@ session_start();
 
     <section class="nav-bar" id="nav-bar">
 
-      <?php
+      <?php      
 
-
-      include("controller/navbar.php");
-
-      include("../controller/navbar.php");
+      include("./controller/navbar.php");
 
 
       ?>
