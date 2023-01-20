@@ -5,7 +5,7 @@
         <div class="hero-content">
             <h1>Welcome</h1>
             <p>Find and adopt your new best friend today.</p>
-            <a href="views/adopt.php"><button id="btn-hero">Read More</button></a>
+            <a href="adopt.php"><button id="btn-hero">Read More</button></a>
         </div>
     </section>
 
