@@ -21,7 +21,7 @@
 
             <div class="pet-adoption">
                 <div class="pet-name"> Patty (0102)</div>
-                <a href="view/findapawn.php">
+                <a href="../view/findapawn.php">
                 <img src="../assets/img/cat1-patty.jpg" alt="Imagem cat to Adoption" height="250px" width="350px">
                 </a>
             </div>
