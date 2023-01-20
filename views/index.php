@@ -14,29 +14,29 @@
         <div class="pet-cards">
             <div class="pet-adoption">
                 <div class="pet-name"> Jordan (0085)</div>
-                <a href="views/findapawn.php">
-                <img src="assets/img/dog1-jordan.jpg" alt="Imagem dog to Adoption" height="250px" width="350px">
+                <a href="../views/findapawn.php">
+                <img src="../assets/img/dog1-jordan.jpg" alt="Imagem dog to Adoption" height="250px" width="350px">
                 </a>
             </div>
 
             <div class="pet-adoption">
                 <div class="pet-name"> Patty (0102)</div>
-                <a href="views/findapawn.php">
-                <img src="assets/img/cat1-patty.jpg" alt="Imagem cat to Adoption" height="250px" width="350px">
+                <a href="view/findapawn.php">
+                <img src="../assets/img/cat1-patty.jpg" alt="Imagem cat to Adoption" height="250px" width="350px">
                 </a>
             </div>
 
             <div class="pet-adoption">
                 <div class="pet-name"> Max (0110)</div>
-                <a href="views/findapawn.php">
-                <img src="assets/img/dog1-max.jpg" alt="Imagem dog to Adoption" height="250px" width="350px">
+                <a href="findapawn.php">
+                <img src="../assets/img/dog1-max.jpg" alt="Imagem dog to Adoption" height="250px" width="350px">
                 </a>
             </div>
 
             <div class="pet-adoption">
                 <div class="pet-name"> Sasha (0070)</div>
-                <a href="views/findapawn.php">
-                <img src="assets/img/cat2-bella.jpeg" alt="Imagem cat to Adoption" height="250px" width="350px">
+                <a href="findapawn.php">
+                <img src="../assets/img/cat2-bella.jpeg" alt="Imagem cat to Adoption" height="250px" width="350px">
                 </a>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 <p id="testimonial3">We adopted our two furry children from this shelter and we could not be happier. They have brought so much joy to our lives and we are so grateful to the staff for all their help and support. If you are thinking about adopting, this is the place to go!</p>
             </div>
         </div>
-        <a href="views/testimonial.php" ><button id="send-testimonial">See..</button></a>
+        <a href="testimonial.php" ><button id="send-testimonial">See..</button></a>
     </section>
 
     <section class="bottom-pic"></section>
