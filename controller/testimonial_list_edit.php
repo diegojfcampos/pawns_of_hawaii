@@ -1,4 +1,4 @@
-<form action='/pawns_of_hawaii/controller/testimonial_update.php' method="post">
+<form action='../controller/testimonial_update.php' method="post">
   <section class="table-section">
     <table class="tables">
       <?php include("testimonial_table_edit.php")?>

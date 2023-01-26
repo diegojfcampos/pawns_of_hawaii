@@ -9,3 +9,7 @@ CREATE table if not exists contact(testimonialid INT NOT NULL PRIMARY KEY  AUTO_
 
 //Creating pet Table
 CREATE table if not exists pet(petid INT NOT NULL PRIMARY KEY  AUTO_INCREMENT, code INT NOT NULL, name VARCHAR(15), age VARCHAR(15), breed VARCHAR(50) NOT NULL, city VARCHAR(30), description MEDIUMTEXT);
+
+//Creating table Donate
+
+CREATE table if not exists donate(donateId INT NOT NULL PRIMARY KEY  AUTO_INCREMENT, firstName VARCHAR(15), lastName VARCHAR(15), email VARCHAR(50), donationAmount INT(30), address VARCHAR(15));
