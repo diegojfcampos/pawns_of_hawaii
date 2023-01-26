@@ -18,7 +18,7 @@ if (isset($_SESSION['privileges'])) {
         case 'admin':
             echo <<<EOT
          
-            <a href="/pawns_of_hawaii/controller/dologout.php">Logout</a>
+            <a href="../controller/dologout.php">Logout</a>
             
             EOT;
             break;
@@ -26,7 +26,7 @@ if (isset($_SESSION['privileges'])) {
         case 'member':
             echo <<<EOT
             
-            <a href="/pawns_of_hawaii/controller/dologout.php">Logout</a>
+            <a href="../controller/dologout.php">Logout</a>
             
             EOT;
             

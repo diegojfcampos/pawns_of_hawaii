@@ -1,7 +1,7 @@
 <?php include("../includes/header.php") ?>
 <main>
     <section class="form-sections" id="login-form">
-        <form action="/paws_of_hawaii/controller/dologin.php" method="post">        
+        <form action="../controller/dologin.php" method="post">        
             
             <h1 class="formsTitle"> Login</h1>
 

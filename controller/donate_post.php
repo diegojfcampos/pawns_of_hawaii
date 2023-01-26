@@ -28,7 +28,7 @@ var_dump($_POST);
         // Query Execution
     if (mysqli_query($conn, $queryInsertUser)) {
         //Redirecting User
-        header('Location: /pawns_of_hawaii/index.php');
+        header('Location: ../index.php');
         //Throwing a text;
         echo "Donation sent";
     }

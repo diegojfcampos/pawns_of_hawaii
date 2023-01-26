@@ -10,7 +10,7 @@ $menu_items = array(
 	),
 	array(
 		'label' => 'Find a Pawn',
-		'url' => '..//views/findapawn.php',
+		'url' => '../views/findapawn.php',
 	),
 	array(
 		'label' => 'Adoption',

@@ -69,7 +69,7 @@ var_dump($_POST);
                 $_SESSION['privileges'] = $privileges;   
                 
                 //header('Location: /pawns_of_hawaii/views/home.php');
-                header('Location: /pawns_of_hawaii/index.php');
+                header('Location: ../index.php');
 
             //Throwing error           
             } else {
