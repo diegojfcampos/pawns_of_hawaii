@@ -47,8 +47,10 @@
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
                 header('Location: ../views/index.php');
-            }else{
+            }else if($user["useradmin"] == '0'){
                 $_SESSION['privileges'] = "member";
+                header('Location: ../views/index.php');
+            }else{
                 header('Location: ../views/index.php');
             }
         } else {
