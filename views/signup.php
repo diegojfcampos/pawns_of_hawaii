@@ -1,4 +1,8 @@
-<?php include("../includes/header.php") ?>
+<?php include("../includes/header.php");
+    echo '<pre>'; print_r($_POST); echo '</pre>';
+    var_dump($_POST);
+
+?>
 <main>
     <section class="form-sections" id="reg-form">
         <form action="../controller/dosignup.php" method="post">
