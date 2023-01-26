@@ -23,7 +23,7 @@ require_once('../config/dbconnect.php');
         // Query Execution
     if (mysqli_query($conn, $queryInsertUser)) {
         //Redirecting User
-        header('Location: /pawns_of_hawaii/index.php');
+        header('Location: ../views/index.php');
         //Throwing a text;
         echo "Message sent";
     }

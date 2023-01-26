@@ -2,7 +2,7 @@
 <?php include("./includes/header.php"); ?>
 
     <section>
-            <?php include("./controller/create_details_page.php"); ?>
+            <?php include("../controller/create_details_page.php"); ?>
     </section>
 
 </main>

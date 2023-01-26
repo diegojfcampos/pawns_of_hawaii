@@ -24,7 +24,7 @@
             //Creating Form to receive datas and allowing update instance
                 echo <<<EOT
                 <section class="form-sections" id="login-form">
-                    <form action="/pawns_of_hawaii/controller/findapawn_update.php"  method="post">
+                    <form action="../controller/findapawn_update.php"  method="post">
 
                         <h1 class="formsTitle"> Edit Pet ...</h1>
                    

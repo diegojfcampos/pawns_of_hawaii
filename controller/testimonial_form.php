@@ -1,6 +1,6 @@
 
 <section class="form-sections">
-        <form action="/pawns_of_hawaii/controller/testimonial_post.php"  method="post">
+        <form action="../controller/testimonial_post.php"  method="post">
 
             <h1 class="formsTitle"> Send us a testimonial ...</h1>
 
