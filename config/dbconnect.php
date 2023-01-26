@@ -2,7 +2,10 @@
 $host = 'pawnsofhawaii.mysql.database.azure.com';
 $user = 'fznhknnefq';
 $password = 'admin@123';
-$dbname = 'pawns_of_hawaii';
+$dbname = 'pawnsofhawaii-database';
+
+echo  "Dbconnected" ;
+
 
 //Creating connection
 $con = mysqli_init();
