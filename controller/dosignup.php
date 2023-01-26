@@ -3,11 +3,11 @@
 
 //Including DB Connection using require_once as better pratice.
 require_once('../config/dbconnect.php');
-
+echo 'dosignup';
 
 //Debbuging - Verifying if the datas was sent corretly from the form
-echo '<pre>'; print_r($_POST); echo '</pre>';
-var_dump($_POST);
+
+
 
 //Starting validations
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -24,7 +24,7 @@ var_dump($_POST);
         //Adding hash to encrypt passwords for best security practices.
         $passwordRegister = md5(trim($_POST['passwordRegister']));
         $passwordCheck = md5(trim($_POST['passwordCheck']));
-
+        echo 'reciving data';
         //Checking privileges
         if($_POST['privileges'] == "admin"){
             $admin = 1;
@@ -34,6 +34,7 @@ var_dump($_POST);
             $privileges = "member";
         };
 
+        echo 'datareceived';
         //Verifying if user is alreayd registered in the DB
         $queryIsRegistered = "SELECT * FROM user where email='$email'" ;        
         $queryRegisterCheck = mysqli_query($conn, $queryIsRegistered);        
@@ -57,6 +58,7 @@ var_dump($_POST);
              //Registering     
         } else {       
             // SQL Query
+            echo 'makingquery';
             $queryInsertUser = "INSERT INTO user (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', $admin)";
            
             // Query Execution
