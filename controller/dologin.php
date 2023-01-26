@@ -46,10 +46,10 @@
             //Redirecting user depending his admin privileges
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
-                header('Location: ../views/index.php');
+                header('Location: ../index.php');
             }else{
                 $_SESSION['privileges'] = "member";
-                header('Location: ../views/index.php');
+                header('Location: ../index.php');
             }
         } else {
             echo "User not found";
