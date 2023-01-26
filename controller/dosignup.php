@@ -3,7 +3,7 @@
 echo 'dosignup';
 
 //Including DB Connection using require_once as better pratice.
-require_once('../config/dbconnect.php');
+require_once('./config/dbconnect.php');
 echo 'dosignup';
 
 //Debbuging - Verifying if the datas was sent corretly from the form
