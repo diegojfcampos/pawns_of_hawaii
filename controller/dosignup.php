@@ -1,5 +1,6 @@
 <?php
 // Including DB Connection 
+echo 'dosignup';
 
 //Including DB Connection using require_once as better pratice.
 require_once('../config/dbconnect.php');
