@@ -28,7 +28,7 @@ require_once('../config/dbconnect.php');
         // Query Execution
         if (mysqli_query($conn, $queryUpdateUser)) {
             // query was successful
-            header('Location: /pawns_of_hawaii/views/findapawn.php');
+            header('Location: ../views/findapawn.php');
             echo "Message sent";
         } else {
             // query failed

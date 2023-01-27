@@ -27,7 +27,7 @@ print_r($_POST['testimonialid']);
             $result = mysqli_query($conn, $query);
         }            
         
-        header('Location: /pawns_of_hawaii/views/testimonial.php');
+        header('Location: ../views/testimonial.php');
         
         echo "Alterations saved";
        

@@ -1,14 +1,13 @@
 <?php
 // Including DB Connection 
-echo 'dosignup';
 
 //Including DB Connection using require_once as better pratice.
 require_once('../config/dbconnect.php');
-echo 'dosignup';
+
 
 //Debbuging - Verifying if the datas was sent corretly from the form
-
-
+echo '<pre>'; print_r($_POST); echo '</pre>';
+var_dump($_POST);
 
 //Starting validations
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -25,7 +24,7 @@ echo 'dosignup';
         //Adding hash to encrypt passwords for best security practices.
         $passwordRegister = md5(trim($_POST['passwordRegister']));
         $passwordCheck = md5(trim($_POST['passwordCheck']));
-        echo 'reciving data';
+
         //Checking privileges
         if($_POST['privileges'] == "admin"){
             $admin = 1;
@@ -35,7 +34,6 @@ echo 'dosignup';
             $privileges = "member";
         };
 
-        echo 'datareceived';
         //Verifying if user is alreayd registered in the DB
         $queryIsRegistered = "SELECT * FROM user where email='$email'" ;        
         $queryRegisterCheck = mysqli_query($conn, $queryIsRegistered);        
@@ -59,7 +57,6 @@ echo 'dosignup';
              //Registering     
         } else {       
             // SQL Query
-            echo 'makingquery';
             $queryInsertUser = "INSERT INTO user (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', $admin)";
            
             // Query Execution
@@ -71,8 +68,8 @@ echo 'dosignup';
                 $_SESSION['email'] = $email;
                 $_SESSION['privileges'] = $privileges;   
                 
-                //header('Location: /pawns_of_hawaii/views/home.php');
-                header('Location: ../index.php');
+             
+                header('Location: ../views/index.php');
 
             //Throwing error           
             } else {

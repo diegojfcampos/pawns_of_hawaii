@@ -1,7 +1,4 @@
-<?php include("../includes/header.php");
-   echo 'view dosignup';
-
-?>
+<?php include("../includes/header.php") ?>
 <main>
     <section class="form-sections" id="reg-form">
         <form action="../controller/dosignup.php" method="post">

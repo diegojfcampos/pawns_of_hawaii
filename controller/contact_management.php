@@ -7,14 +7,14 @@
             
             case 'admin':
                 echo '<h1 class="edit-titles"> Contact List</h1/>';
-                include("contact_list.php");
+                include("../controller/contact_list.php");
                 echo '<h1 class="edit-titles"> Contact Us</h1/>';
-                include("contact_form.php");
+                include("../controller/contact_form.php");
                 break;
 
             case 'member':   
                 echo '<h1 class="edit-titles"> Contact Us</h1/>';             
-                include("contact_form.php");
+                include("../controller/contact_form.php");
                 break;
 
             default:
@@ -22,7 +22,7 @@
         }
     }else{
         echo '<h1 class="edit-titles"> Contact Us</h1/>';
-        include("contact_form.php");
+        include("../controller/contact_form.php");
         
     }
 ?>

@@ -1,5 +1,5 @@
 <div class="form-sections">
-  <form action="../controller/index_feature_update.php" method="post">
+  <form action="controller/index_feature_update.php" method="post">
     <h1 class="formsTitle"> Change the feature above</h1>
     <label for="title">Title: </label><br>
     <input type="text"  placeholder="Chose the Feature's Title" id="title" name="title"  ><br>

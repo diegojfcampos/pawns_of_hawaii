@@ -1,8 +1,9 @@
-<section class="table-section">
-        <table class="tables">            
-            <tr>
-                <?php include("../controller/testimonial_table_list.php")?>
-            </tr>
+  <section class="table-section">
+    <table class="tables">
+      <?php include("../controller/testimonial_table_list.php")?>
+    </table>
+  </section>
+  <div id="btnSetVisible-div">
 
-        </table>
-</section>
+  </div>
+

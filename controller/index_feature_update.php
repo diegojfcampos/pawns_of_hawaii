@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $index_content = file_get_contents('../index.php');
+  $index_content = file_get_contents('/pawns_of_hawaii/index.php');
 
   // Get current Title
   preg_match('/id="title-whyadopt">(.*?)</', $index_content, $title_matches);
@@ -18,5 +18,5 @@ $content = $_POST['content'];
 // Chang Values and updating the page.
 $index_content = str_replace('id="title-whyadopt">' . $current_title, 'id="title-whyadopt">' . $title, $index_content);
 $index_content = str_replace('<p>' . $current_content . '</p>', '<p>' . $content . '</p>', $index_content);
-header('Location: ../index.php');
+header('Location: /pawns_of_hawaii/index.php');
 ?>

@@ -6,7 +6,7 @@
         switch ($_SESSION['privileges']) {
 
             case 'admin':
-                include("index_form_edit.php");                
+                include("./index_form_edit.php");                
                 break;
 
             default:

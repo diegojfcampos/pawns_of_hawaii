@@ -7,7 +7,7 @@
 
             case 'admin':
                
-                include("findapawn_table_edit.php");
+                include("../controller/findapawn_table_edit.php");
                               
                 break;
 

@@ -23,7 +23,7 @@
                 echo <<<EOT
                 <section class='detail-container'>
                     <div class='photo'>
-                        <img src='/pawns_of_hawaii/assets/img/dog-contact.png'>
+                        <img src='../assets/img/dog-contact.png'>
                     </div>
                     <section class='detail-info'>
 

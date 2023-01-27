@@ -1,15 +1,6 @@
-<?php
-/* Creating dynamically the header of the table*/
-
-/*Creating dynamic tables where depending of the origin of the call
-will create a table with datas from the specifc database*/
-
-
-//Including DB Connection using require_once as better pratice.
+<?php 
 require_once('../config/dbconnect.php');
-
-
-      $menu_items = array(
+$menu_items = array(
         array(
           'label' => 'ID',
         ),
@@ -32,23 +23,20 @@ require_once('../config/dbconnect.php');
       ;
 
       //Creating Query
-      $queryGetTestimonial = "SELECT * from testimonial WHERE visible = 1";
-      $getTestimonialResult = mysqli_query($conn, $queryGetTestimonial);
+      $queryGetContact = "SELECT * from contact";
+      $getContactResult = mysqli_query($conn, $queryGetContact);
 
-      if (!$getTestimonialResult) {
+      if (!$getContactResult) {
         echo "Problem to get testimonial list";
       } else {
-        while ($user_data = mysqli_fetch_array($getTestimonialResult)) {
+        while ($user_data = mysqli_fetch_array($getContactResult)) {
           echo "<tr>";
-          echo "<td>" . $user_data['testimonialid'] . "</td>";
+          echo "<td>" . $user_data['messageid'] . "</td>";
           echo "<td>" . $user_data['firstname'] . "</td>";
           echo "<td>" . $user_data['lastname'] . "</td>";
           echo "<td>" . $user_data['email'] . "</td>";
-          echo "<td>" . $user_data['testimonial'] . "</td>";
+          echo "<td>" . $user_data['textmessage'] . "</td>";
           echo "</tr>";
         }
       }
-     
-
 ?>
-

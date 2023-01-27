@@ -1,5 +1,5 @@
 <?php
-    echo 'Working';
+    echo 'ESTA FUNCIONANDO';
     // Including DB Connection 
 
     //Including DB Connection using require_once as better pratice.
@@ -46,12 +46,10 @@
             //Redirecting user depending his admin privileges
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
-                header('Location: ../views/index.php');
-            }else if($user["useradmin"] == '0'){
-                $_SESSION['privileges'] = "member";
-                header('Location: ../views/index.php');
+                header('Location: ../index.php');
             }else{
-                header('Location: ../views/index.php');
+                $_SESSION['privileges'] = "member";
+                header('Location: ../index.php');
             }
         } else {
             echo "User not found";
