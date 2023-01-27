@@ -4,7 +4,7 @@ $user = 'fznhknnefq';
 $password = 'admin@123';
 $dbname = 'pawnsofhawaii-database';
 
-
+echo "Trying to connect";
 //Creating connection
 
 mysqli_real_connect($conn, $host, $user, $password, $dbname, 3306, MYSQLI_CLIENT_SSL);

@@ -1,6 +1,6 @@
-<?php include("./includes/header.php") ?>
+<?php include("./includes/header.php"); echo "View Sign Up";?>
 <main>
-    <form action="controller/register.php" method="post">
+    <form action="../controller/register.php" method="post">
         <div class="signup-form">
             <h1>Registration</h1><br>
             <label for="fname">First Name:</label><br>
