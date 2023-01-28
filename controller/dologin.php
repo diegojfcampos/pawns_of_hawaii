@@ -45,12 +45,12 @@
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
                 echo 'login';       
-                header('Location: ../view/index.php');
+                header('Location: ./view/index.php');
                 echo 'after location';  
             }else{
                 $_SESSION['privileges'] = "member";
                 
-                header('Location: ../view/index.php');
+                header('Location: ./view/index.php');
             }
         } else {
             echo "User not found";
