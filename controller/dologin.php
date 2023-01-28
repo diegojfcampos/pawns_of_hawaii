@@ -1,5 +1,5 @@
 <?php
-    echo 'ESTA FUNCIONANDO';
+    
     // Including DB Connection 
 
     //Including DB Connection using require_once as better pratice.
@@ -45,12 +45,12 @@
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
                     
-                header('Location: ../view/index.php');
+                header('Location: ../index.php');
                 
             }else{
                 $_SESSION['privileges'] = "member";
                 
-                header('Location: ../view/index.php');
+                header('Location: ../index.php');
             }
         } else {
             echo "User not found";
