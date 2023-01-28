@@ -33,9 +33,11 @@
             
             //Starting Session                
             session_start();
-
+            $hashed_value = hash("sha256", $value);
+            setcookie("hashed_value", $hashed_value, time() + (86400 * 30), "/");
             //Instancing user data into Super Global Session
-            $_SESSION['id'] = $user["userid"];
+            session_regenerate_id();
+            $_SESSION['id'] = $user["userid"];            
             $_SESSION['fname'] = $user["firstname"];
             $_SESSION['lname'] = $user["lastname"];
             $_SESSION['email'] = $user["email"];
