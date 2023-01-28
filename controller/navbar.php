@@ -6,11 +6,11 @@
 $menu_items = array(
 	array(
 		'label' => 'Home',
-		'url' => '../index.php',
+		'url' => '../views/index.php',
 	),
 	array(
 		'label' => 'Find a Pawn',
-		'url' => '..//views/findapawn.php',
+		'url' => '../views/findapawn.php',
 	),
 	array(
 		'label' => 'Adoption',
