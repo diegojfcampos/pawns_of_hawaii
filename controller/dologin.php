@@ -49,7 +49,7 @@
                 header('Location: ../index.php');
             }else{
                 $_SESSION['privileges'] = "member";
-                header('Location: ../index.php');
+                header('Location: ../view/index.php');
             }
         } else {
             echo "User not found";
