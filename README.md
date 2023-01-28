@@ -1,7 +1,9 @@
 
 # Pawns of Hawaii
 
+
 ![logo](https://user-images.githubusercontent.com/52011695/215003932-2fb59f4d-6756-4744-b445-ba7d534948ba.png)
+
 
 ## Deployment
 
@@ -9,6 +11,14 @@ Azure App Service + Azure DataBase for MySQL flexible server
 
   https://pawnsofhawaii.azurewebsites.net////views/index.php
 
+<div style="display: inline_block"><br> 
+	
+   <img align="center" alt="Diego-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg">  
+  <img align="center" alt="Diego-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Diego-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">   
+  <img align="center" alt="Diego-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"> 
+<img align="center" alt="Diego-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg"> 
+</div>
 
 ## Introcution
 Website, dedicated to helping pets find loving homes through adoption. Our mission is simple: to provide pets and families with the happiness they deserve. 
@@ -19,6 +29,7 @@ Thank you for considering adoption and for supporting our efforts to make the wo
 
 
 ## Overview
+
 The home page was created with HTML, CSS, PHP and MySql  completely by handcode also recurssive and MVC.
 It has 3 diffents states Public, Member and Admin all pages are dynamic and react accordly with the user inclunding menus.
 
