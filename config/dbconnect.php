@@ -4,7 +4,7 @@ $user = 'fznhknnefq';
 $password = 'admin@123';
 $dbname = 'pawnsofhawaii-database';
 
-echo  "Trying to connect";
+
 //Creating connection
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "../config/DigiCertGlobalRootCA.crt.pem", NULL, NULL);

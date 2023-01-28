@@ -1,10 +1,10 @@
 <?php
 // Including DB Connection 
-echo "Do Sign UP, before connection" ;
+
 //Including DB Connection using require_once as better pratice.
 require_once('../config/dbconnect.php');
 
-echo "Do Sign UP, after connection" ;
+
 //Debbuging - Verifying if the datas was sent corretly from the form
 
 //Starting validations
@@ -67,7 +67,7 @@ echo "Do Sign UP, after connection" ;
                 $_SESSION['privileges'] = $privileges;   
                 
              
-                header('Location: ../views/index.php');
+                header('Location: ./views/index.php');
 
             //Throwing error           
             } else {
