@@ -6,7 +6,7 @@ Members access and resources are built into the nav-bar page,
 the functions will be displeyd there
 */
 
-
+session_start();
 //Verifying if privilegies is sat
 if (isset($_SESSION['privileges'])) {  
 
