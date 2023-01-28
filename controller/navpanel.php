@@ -8,33 +8,18 @@ the functions will be displeyd there
 
 
 //Verifying if privilegies is sat
-if (isset($_SESSION['privileges'])) {
-    //Manneging content by user privileges
-    switch ($_SESSION['privileges']) {
+if (isset($_SESSION['privileges'])) {  
 
-        case 'admin':
-            echo <<<EOT
-         
-            <a href="../controller/dologout.php">Logout</a>
-            
-            EOT;
-            break;
+    echo `<a href="../controller/dologout.php">Logout</a>`;
 
-        case 'member':
-            echo <<<EOT
-            
-            <a href="../controller/dologout.php">Logout</a>
-            
-            EOT;
+} else {
 
-            break;
 
-        default:
-            echo '<a href="../views/login.php">Login</a>';
-            echo '<a href="../views/signup.php">Sign-up</a>';
-            break;
-    }
+    echo '<a href="../views/login.php">Login</a>';
+    echo '<a href="../views/signup.php">Sign-up</a>';
+
 }
+
 
 
 
