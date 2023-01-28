@@ -67,7 +67,7 @@ require_once('../config/dbconnect.php');
                 $_SESSION['privileges'] = $privileges;   
                 
              
-                header('Location: ./views/index.php');
+                header('Location: ../views/index.php');
 
             //Throwing error           
             } else {
