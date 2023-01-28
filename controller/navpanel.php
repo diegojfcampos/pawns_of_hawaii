@@ -1,12 +1,9 @@
 <?php
 
 /*
-
 Create the nave pane allowing all managemnts and upgrade pages
-
 Members access and resources are built into the nav-bar page,
 the functions will be displeyd there
-
 */
 
 
@@ -29,28 +26,18 @@ if (isset($_SESSION['privileges'])) {
             <a href="../controller/dologout.php">Logout</a>
             
             EOT;
-            
+
             break;
 
         default:
+            echo '<a href="../views/login.php">Login</a>';
+            echo '<a href="../views/signup.php">Sign-up</a>';
             break;
     }
-} else {
-   
-	 switch ($_SERVER['PHP_SELF']) {
-			 
-           case '/paws_of_hawaii/index.php':                  
-                echo '<a href="../views/login.php">Login</a>';        
-        		echo '<a href="../views/signup.php">Sign-up</a>';
-                break;            
-            default:
-                echo '<a href="../views/login.php">Login</a>';        
-        		echo '<a href="../views/signup.php">Sign-up</a>';
-                break;
-        } 
-        
-
-    	
-
 }
+
+
+
+
+
 ?>
