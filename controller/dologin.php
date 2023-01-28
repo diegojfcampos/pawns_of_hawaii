@@ -37,7 +37,7 @@
             setcookie("hashed_value", $hashed_value, time() + (12 * 60 * 60), "/");
             
             //Instancing user data into Super Global Session
-            session_regenerate_id();
+            
             $_SESSION['id'] = $user["userid"];            
             $_SESSION['fname'] = $user["firstname"];
             $_SESSION['lname'] = $user["lastname"];
@@ -48,12 +48,12 @@
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
                     
-                header('Location: ../index.php');
+                header('Location: ../views/index.php');
                 
             }else{
                 $_SESSION['privileges'] = "member";
                 
-                header('Location: ../index.php');
+                header('Location: ../views/index.php');
             }
         } else {
             echo "User not found";
