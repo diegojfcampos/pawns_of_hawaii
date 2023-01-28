@@ -8,7 +8,12 @@
 Azure App Service + Azure DataBase for MySQL flexible server
 
   https://pawnsofhawaii.azurewebsites.net////views/index.php
-
+<div style="display: inline_block"><br> 
+   <img align="center" alt="Diego-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg">  
+  <img align="center" alt="Diego-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Diego-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">   
+  <img align="center" alt="Diego-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"> 
+</div>
 
 ## Introcution
 Website, dedicated to helping pets find loving homes through adoption. Our mission is simple: to provide pets and families with the happiness they deserve. 
