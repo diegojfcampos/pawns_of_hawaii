@@ -13,8 +13,6 @@ if (isset($_SESSION['privileges'])) {
     echo `<a href="../controller/dologout.php">Logout</a>`;
 
 } else {
-
-
     echo '<a href="../views/login.php">Login</a>';
     echo '<a href="../views/signup.php">Sign-up</a>';
 
