@@ -27,11 +27,9 @@
             $firstname = $user['firstname'];
             $lastname = $user['lastname'];
             $email = $user['email'];
-            $admin = $user['useradmin'];    
+            $admin = $user['useradmin']; 
               
-            echo $user['useradmin'];
-            var_dump($admin);
-            
+           
             
             //Starting Session                
             session_start();
@@ -46,9 +44,12 @@
             //Redirecting user depending his admin privileges
             if($user["useradmin"] == '1'){
                 $_SESSION['privileges'] = "admin";
+                echo 'login';       
                 header('Location: ../view/index.php');
+                echo 'after location';  
             }else{
                 $_SESSION['privileges'] = "member";
+                
                 header('Location: ../view/index.php');
             }
         } else {
