@@ -12,5 +12,5 @@ mysqli_real_connect($conn, $host, $user, $password, $dbname, 3306, MYSQLI_CLIENT
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo  "Dbconnected" ;
+
 ?>
