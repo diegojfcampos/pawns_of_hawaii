@@ -55,12 +55,11 @@ require_once('../config/dbconnect.php');
              //Registering     
         } else {       
             // SQL Query
-            $queryInsertUser = "INSERT INTO pawnsofhawaii-database.user (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', $admin)";
+            $queryInsertUser = "INSERT INTO user (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', $admin)";
            
             // Query Execution
             if (mysqli_query($conn, $queryInsertUser)) {
-                echo "User inserted";
-                
+                echo "User inserted";                
                 //Creating Session
                 session_start();
                 $_SESSION['email'] = $email;
