@@ -60,13 +60,11 @@ require_once('../config/dbconnect.php');
             // Query Execution
             if (mysqli_query($conn, $queryInsertUser)) {
                 echo "User inserted";                
-                //Creating Session
+                //Creating Session               
+                header('Location: ../views/index.php');             
                 session_start();
                 $_SESSION['email'] = $email;
                 $_SESSION['privileges'] = $privileges;  
-                header('Location: ./index.php');  
-                echo "User inserted after";           
-             
                 
 
             //Throwing error           
