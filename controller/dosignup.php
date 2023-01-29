@@ -35,7 +35,7 @@ require_once('../config/dbconnect.php');
         //Verifying if user is alreayd registered in the DB
         $queryIsRegistered = "SELECT * FROM user where email='$email'" ;        
         $queryRegisterCheck = mysqli_query($conn, $queryIsRegistered);        
-        var_dump($_POST);
+        
         if (mysqli_num_rows($queryRegisterCheck) > 0) {
            
             echo "User already registerd";        
@@ -56,15 +56,17 @@ require_once('../config/dbconnect.php');
         } else {       
             // SQL Query
             $queryInsertUser = "INSERT INTO user (firstname, lastname, email, userpassword, useradmin) VALUES ('$fname', '$lname', '$email', '$passwordRegister', $admin)";
-           
+            session_start();
             // Query Execution
             if (mysqli_query($conn, $queryInsertUser)) {
                 echo "User inserted";                
-                //Creating Session               
-                header('Location: ../views/index.php');             
-                session_start();
+                //Creating Session            
+                       
+                
                 $_SESSION['email'] = $email;
                 $_SESSION['privileges'] = $privileges;  
+
+                header('Location: ../views/index.php');   
                 
 
             //Throwing error           
