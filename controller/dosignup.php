@@ -64,7 +64,7 @@ require_once('../config/dbconnect.php');
                 session_start();
                 $_SESSION['email'] = $email;
                 $_SESSION['privileges'] = $privileges;  
-                header('Location: ../views/index.php');             
+                header('Location: ./views/index.php');             
              
                 
 
