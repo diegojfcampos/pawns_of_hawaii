@@ -64,7 +64,7 @@ require_once('../config/dbconnect.php');
                 session_start();
                 $_SESSION['email'] = $email;
                 $_SESSION['privileges'] = $privileges;  
-                header('Location: ../index.php');  
+                header('Location: ./index.php');  
                 echo "User inserted after";           
              
                 
