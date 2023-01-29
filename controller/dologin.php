@@ -33,8 +33,7 @@
             
             //Starting Session                
             session_start();
-            $hashed_value = hash("sha256", $value);
-            setcookie("hashed_value", $hashed_value, time() + (12 * 60 * 60), "/");
+           
             
             //Instancing user data into Super Global Session
             

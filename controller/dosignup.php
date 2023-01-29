@@ -63,10 +63,10 @@ require_once('../config/dbconnect.php');
                 //Creating Session
                 session_start();
                 $_SESSION['email'] = $email;
-                $_SESSION['privileges'] = $privileges;   
-                
+                $_SESSION['privileges'] = $privileges;  
+                header('Location: ../views/index.php');             
              
-                header('Location: ../views/index.php');
+                
 
             //Throwing error           
             } else {
