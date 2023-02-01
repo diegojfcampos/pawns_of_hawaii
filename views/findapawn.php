@@ -1,5 +1,6 @@
 <main>
-    <?php include("../includes/header.php") ?>
+    <?php include("../includes/header.php");
+    session_start();?>
 
     <h1 class="edit-titles"> Pet List</h1>
     <section class="table-section">
@@ -16,6 +17,7 @@
     <?php switch ($_SESSION['privileges']) {        
         case 'admin':
             echo '<h1 class="edit-titles"> Pet List Edit</h1>';
+            break;
         }
     ?>
     
