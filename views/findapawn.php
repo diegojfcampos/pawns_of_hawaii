@@ -1,5 +1,6 @@
 <main>
     <?php include("../includes/header.php");
+    ob_start();
     session_start();?>
 
     <h1 class="edit-titles"> Pet List</h1>
