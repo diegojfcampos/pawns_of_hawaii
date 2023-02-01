@@ -10,7 +10,6 @@ session_start();
 //Verifying if privilegies is sat
 if (isset($_SESSION['privileges'])) {
 
-    echo `isset previlegies` . var_dump($_SESSION['privileges']);
     echo `<a href="../controller/dologout.php">Logout</a>`;
 
 } else {
@@ -19,10 +18,5 @@ if (isset($_SESSION['privileges'])) {
     echo '<a href="../views/signup.php">Sign-up</a>';
 
 }
-
-
-
-
-
 
 ?>
